@@ -1,4 +1,5 @@
 import React from 'react';
+import image from '../../assets/images/Banners-greaXpert/3d style mechanical item -5.jpg'
 
 const AutomobileInfo = () => {
   return (
@@ -8,17 +9,15 @@ const AutomobileInfo = () => {
         {/* Left Video with Overlay Content */}
         <div className="relative">
           <img
-            src="/assets/images/car-banner.jpg"
+            src={image}
             alt="Car Banner"
-            className="w-full h-full object-cover rounded-lg shadow-lg"
+            className="w-96 object-cover rounded-lg shadow-lg"
           />
           {/* Fade Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70 rounded-lg"></div>
           {/* Overlay Text */}
           <div className="absolute inset-0 flex items-center justify-center text-center p-6 md:p-12">
-            <h2 className="text-white text-3xl md:text-4xl font-bold">
-              Drive with Confidence
-            </h2>
+          
           </div>
         </div>
 
