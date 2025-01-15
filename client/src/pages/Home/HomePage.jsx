@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
+import HeroSection from "../../components/herosection/HeroSection";
 
 const HomePage = () => {
-  return (
-    <div className='w-full h-screen bg-zinc-900' >
+  return <>
+  <HeroSection/>
+  
+  
+  
+  
+  
+  
+  </>;
+};
 
-
-    </div>
-  )
-}
-
-export default HomePage
+export default HomePage;
