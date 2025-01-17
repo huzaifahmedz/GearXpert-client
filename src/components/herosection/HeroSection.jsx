@@ -13,6 +13,7 @@ const HeroSection = () => {
       rotate:-10,
       x: "100px",
       duration: 1,
+      delay:.5
     });
 
     let tl = gsap.timeline();
@@ -38,16 +39,16 @@ const HeroSection = () => {
           muted
           ref={videoRef}
           src={video}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover mt-8"
         ></video>
         <div className="absolute inset-0 bg-black/70"></div> {/* Overlay */}
       </div>
 
       {/* Content */}
-      <div className="inside-main w-full h-full flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start relative z-10 px-6 md:px-12">
+      <div className="inside-main w-full h-full flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start relative z-10 px-6 md:px-12 lg:mt-10">
         {/* Text Section */}
-        <div className="text-section w-full md:w-1/2 h-full flex flex-col justify-center items-center md:items-start text-center md:text-left">
-          <h4 className="content text-4xl md:text-5xl lg:text-6xl lg:leading-tight font-semibold text-white drop-shadow-lg">
+        <div className="text-section w-full md:w-1/2 h-full flex flex-col justify-center items-start md:items-start text-start md:text-left">
+          <h4 className="content text-4xl md:text-5xl lg:text-6xl leading-[50px]  lg:leading-tight font-semibold text-white drop-shadow-lg">
             Your One Stop Shop for
             <span className="text-gray-400"> Quality Auto Parts!</span>
           </h4>

@@ -1,39 +1,79 @@
-import React from 'react';
-import image from '../../assets/images/Banners-greaXpert/3d style mechanical item -5.jpg'
+import image from "../../assets/images/Banners-greaXpert/enginPart.jpg";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 const AutomobileInfo = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    gsap.from(".AnimateImage", {
+      opacity: 0,
+      y: "100px",
+      duration: 0.4,
+      scrollTrigger: ".AnimateImage",
+      stagger: 0.3,
+    });
+    gsap.from(".Line",{
+
+      width:"0%",
+      duration:1 
+
+
+    })
+
+  });
+
   return (
-    <div className="relative min-h-screen bg-black text-white flex items-center justify-center">
+    <div className="relative h-auto py-24  lg:min-h-screen bg-black text-white flex items-center justify-center">
       {/* Wrapper for Layout */}
       <div className="container mx-auto px-6 md:px-12 lg:px-15 grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left Video with Overlay Content */}
-        <div className="relative">
+        {/* Left Video/Image with Overlay */}
+        <div className="relative hidden md:block">
           <img
             src={image}
             alt="Car Banner"
-            className="w-96 object-cover rounded-lg shadow-lg"
+            className="AnimateImage w-full h-96 object-contain rounded-lg shadow-2xl p-12"
           />
-          {/* Fade Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70 rounded-lg"></div>
-          {/* Overlay Text */}
-          <div className="absolute inset-0 flex items-center justify-center text-center p-6 md:p-12">
-          
+          {/* Radial Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-radial from-black via-transparent to-black rounded-lg"></div>
+          <div className="absolute inset bg-black bg-opacity-60 rounded-lg ">
           </div>
         </div>
 
         {/* Right Content */}
-        <div className="flex flex-col justify-center space-y-6 z-20">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Revolutionize Your Ride
+        <div className="AnimateImage flex flex-col justify-center space-y-3 z-20 text-left">
+          <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
+            GearXpert: Drive Excellence, Upgrade with Precision
           </h1>
-          <p className="text-lg md:text- text-gray-300">
-            Discover the best auto parts and accessories for your vehicle. We offer a wide range of high-quality, affordable options to enhance your driving experience. From brake pads to performance upgrades, we’ve got you covered.
+          <p className="text-lg md:text-xl text-gray-300">
+            GearXpert is your ultimate destination for premium vehicle auto
+            parts. From cars to trucks, we provide a vast selection of
+            high-quality, reliable, and affordable components designed to
+            enhance performance and ensure a smooth ride
           </p>
           <p className="text-lg md:text-xl text-gray-300">
-            Whether you’re a car enthusiast or just looking to keep your car running smoothly, our products are designed to meet your needs. Experience the ultimate in reliability, style, and affordability.
+            Explore our expertly curated range to keep your vehicle running at
+            its best!
           </p>
         </div>
+
       </div>
+
+      {/* Mobile Background Image */}
+      <div className="absolute inset-0 md:hidden">
+        <div className="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
+        <img
+          src={image}
+          alt="Car Background"
+          className="absolute inset-0 w-full h-full object-cover opacity-80 animate-spin-slow"
+        />
+        {/* Radial Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-radial from-black via-transparent to-black"></div>
+
+
+      </div>
+
     </div>
   );
 };
