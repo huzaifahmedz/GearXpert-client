@@ -14,18 +14,11 @@ const AutomobileInfo = () => {
       scrollTrigger: ".AnimateImage",
       stagger: 0.3,
     });
-    gsap.from(".Line",{
-
-      width:"0%",
-      duration:1 
-
-
-    })
 
   });
 
   return (
-    <div className="relative h-auto py-24  lg:min-h-screen bg-black text-white flex items-center justify-center">
+    <div className="hidden lg:block relative h-auto py-24  lg:min-h-screen bg-black text-white flex items-center justify-center">
       {/* Wrapper for Layout */}
       <div className="container mx-auto px-6 md:px-12 lg:px-15 grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Video/Image with Overlay */}
@@ -34,7 +27,7 @@ const AutomobileInfo = () => {
             src={image}
             alt="Car Banner"
             className="AnimateImage w-full h-96 object-contain rounded-lg shadow-2xl p-12"
-          />
+           />
           {/* Radial Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-radial from-black via-transparent to-black rounded-lg"></div>
           <div className="absolute inset bg-black bg-opacity-60 rounded-lg ">
@@ -42,7 +35,7 @@ const AutomobileInfo = () => {
         </div>
 
         {/* Right Content */}
-        <div className="AnimateImage flex flex-col justify-center space-y-3 z-20 text-left">
+        <div className="AnimateImage flex flex-col justify-center space-y-3 text-left">
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
             GearXpert: Drive Excellence, Upgrade with Precision
           </h1>

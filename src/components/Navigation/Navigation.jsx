@@ -25,11 +25,11 @@ const Navigation = () => {
       duration: 0.3,
     });
 
-    gsap.from(".header", {
-      opacity: 0,
-      Y: "-50px",
-      duration: .3,
-    });
+    // gsap.from(".header", {
+    //   opacity: 0,
+    //   Y: "-50px",
+    //   duration: .3,
+    // });
 
     tl.from(".TopNavSecond", {
       opacity: 0,
@@ -50,7 +50,7 @@ const Navigation = () => {
       opacity:0,
       x:"30px",
       duration:.3,
-      stagger:.1
+      stagger:.1,
 
     })
 
@@ -68,12 +68,12 @@ const Navigation = () => {
   });
 
   return (
-    <header className="header fixed top-0 right-0 w-full z-30">
+    <header className=" fixed top-0 right-0 w-full z-30">
       {/* Top Bar */}
       <div className="bg-red-500 text-white py-2 px-4">
-        <div className="max-w-full mx-auto flex items-center justify-between text-sm px-7">
+        <div className="max-w-full mx-auto flex items-center gap-1  justify-between text-sm px-7">
           {/* Offer Headline */}
-          <p className=" TopNavfirst font-medium text-xs">
+          <p className=" TopNavfirst font-medium text-xs  ">
             🛍️ 35% Off on Each Product!
           </p>
 

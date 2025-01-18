@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import video from "../../assets/videos/video-banner.webm";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ChatBot from "../chatBot/ChatBot";
 
 const HeroSection = () => {
   let videoRef = useRef();
@@ -62,6 +63,10 @@ const HeroSection = () => {
             <span className="absolute inset-0 bg-white w-0 h-full transition-all duration-300 ease-in-out transform -translate-x-full hover:w-full"></span>
             <span className="relative z-10">Shop Now</span>
           </button>
+         
+         <ChatBot/>
+         
+           
         </div>
       </div>
     </div>

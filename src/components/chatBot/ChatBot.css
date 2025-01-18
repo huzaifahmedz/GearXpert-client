@@ -1,0 +1,19 @@
+
+
+@keyframes release {
+    0%{
+        filter: drop-shadow(1px 1px 10px #fff);
+
+    }50%{
+     filter: drop-shadow(1px 1px 15px #fff);
+    }100%{
+        filter: drop-shadow(1px 1px 10px #fff);
+
+    }
+    
+}
+
+.chatbot{
+    animation: infinite 2s release ;
+}
+
