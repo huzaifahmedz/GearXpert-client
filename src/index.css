@@ -3,6 +3,7 @@
 body{
     font-family: "Poppins", sanse-serif;
     font-style: normal;
+    background-color: #000;
   }
 ::-webkit-scrollbar{
   display: none

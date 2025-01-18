@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-gray-300">
+    <footer className="bg-black text-gray-300 p-7">
       {/* Newsletter Section */}
       <div className="container mx-auto py-8 px-5 border-b border-gray-700">
         <div className="flex flex-col md:flex-row items-center justify-between bg-black p-6 rounded-lg shadow-lg">

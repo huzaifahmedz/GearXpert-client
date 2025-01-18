@@ -1,0 +1,31 @@
+/* Keyframe animation for width transition */
+@keyframes move {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Active state with the animated underline effect */
+.active::before {
+    content: "";
+    width: 100%;
+    height: 3px; /* Adjusted height for responsiveness */
+    background: #EF4444;
+    position: absolute;
+    animation: move 1s alternate ; /* Optimized with infinite loop for continuous animation */
+    left: 0;
+    border-radius: 10px;
+    bottom: 0;
+    transition: .3s ease-in-out;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    /* Hide the underline effect on smaller screens */
+    .active::before {
+        display: none;
+    }
+}
