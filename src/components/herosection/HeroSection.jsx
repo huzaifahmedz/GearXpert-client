@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import video from "../../assets/videos/video-banner.webm";
+import video from "../../assets/videos/video-banner.mp4";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ChatBot from "../chatBot/ChatBot";
@@ -51,7 +51,7 @@ const HeroSection = () => {
         {/* Text Section */}
         <div className="text-section w-full md:w-1/2 h-full flex flex-col justify-center items-start md:items-start text-start md:text-left">
           <h4 className="content text-4xl md:text-5xl lg:text-6xl leading-[50px]  lg:leading-tight font-semibold text-white drop-shadow-lg">
-            Your One Stop Shop for
+            Your One Step Shop for
             <span className="text-gray-400"> Quality Auto Parts!</span>
           </h4>
           <p className="content mt-4 text-lg md:text-xl text-gray-300">

@@ -1,33 +1,8 @@
-import React, { useEffect } from "react";
 import "./Services.css"; // Include custom styles for further enhancements
-import carImage from "../../assets/images/Services_banner/car-5725334.webp";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import carImage from "../../assets/images/Services_banner/Image_banner-car.webp";
 
 const Services = () => {
-  useEffect(() => {
-    // Register the ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
 
-    // Apply GSAP animation to all `.card` elements on scroll
-    gsap.utils.toArray(".card").forEach((card) => {
-      gsap.to(card, {
-        y: 30,
-        opacity: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: card, // Triggered by the card itself
-          start: "top 60% ", // Start when the card enters the viewport
-          end: "bottom", // End when the card reaches the top of the viewport
-          scrub: true, // Smooth scrubbing effect
-          markers: false, // Disable markers in production
-        },
-      });
-    });
-
-    // Cleanup GSAP ScrollTrigger instances when the component unmounts
-    return () => ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  }, []);
 
   return (
     <>
@@ -50,7 +25,7 @@ const Services = () => {
       <section className="bg-black py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
           {/* Service Card 1 */}
-          <div className="card bg-red-500 text-white p-6 rounded-lg shadow-lg transition">
+          <div className="service-card bg-red-500 text-white p-6 rounded-lg shadow-lg transition">
             <div className="icon text-4xl mb-4 text-white">
               <i className="fas fa-user"></i>
             </div>
@@ -64,7 +39,7 @@ const Services = () => {
           </div>
 
           {/* Service Card 2 */}
-          <div className="card bg-red-500 text-white p-6 rounded-lg shadow-lg">
+          <div className="service-card bg-red-500 text-white p-6 rounded-lg shadow-lg">
             <div className="icon text-4xl mb-4">
               <i className="fas fa-gem"></i>
             </div>
@@ -78,7 +53,7 @@ const Services = () => {
           </div>
 
           {/* Service Card 3 */}
-          <div className="card bg-red-500 text-white p-6 rounded-lg shadow-lg">
+          <div className="service-card bg-red-500 text-white p-6 rounded-lg shadow-lg">
             <div className="icon text-4xl mb-4">
               <i className="fas fa-users"></i>
             </div>

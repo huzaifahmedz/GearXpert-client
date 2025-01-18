@@ -5,15 +5,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import images
-import Image1 from "../../assets/images/sliderImages/Image1_.webp";
-import Image2 from "../../assets/images/sliderImages/Image2_.webp";
-import Image3 from "../../assets/images/sliderImages/Image3_.webp";
-import Image4 from "../../assets/images/sliderImages/Image4_.webp";
-import Image5 from "../../assets/images/sliderImages/Image5_.webp";
-import Image6 from "../../assets/images/sliderImages/Image6_.webp";
-import Image7 from "../../assets/images/sliderImages/Image7_.webp";
-import Image8 from "../../assets/images/sliderImages/Image8_.webp";
-import Image9 from "../../assets/images/sliderImages/Image9_.webp";
+import Image1 from "../../assets/images/sliderImages/Image1.webp";
+import Image2 from "../../assets/images/sliderImages/Image2.webp";
+import Image3 from "../../assets/images/sliderImages/Image3.webp";
+import Image4 from "../../assets/images/sliderImages/Image4.webp";
+import Image5 from "../../assets/images/sliderImages/Image5.webp";
+import Image6 from "../../assets/images/sliderImages/Image6.webp";
+import Image7 from "../../assets/images/sliderImages/Image7.webp";
+import Image8 from "../../assets/images/sliderImages/Image8.webp";
+import Image9 from "../../assets/images/sliderImages/Image9.webp";
+import Image10 from "../../assets/images/sliderImages/Image10.webp";
 
 const ImageSlider = () => {
   const sliderRef = useRef(null);
@@ -38,7 +39,7 @@ const ImageSlider = () => {
 
   // Slide data
   const slides = [
-    Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9,
+    Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9,Image10
   ];
 
   return (

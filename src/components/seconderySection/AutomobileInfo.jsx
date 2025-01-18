@@ -1,4 +1,4 @@
-import image from "../../assets/images/Banners-greaXpert/enginPart.jpg";
+import image from "../../assets/images/Banners-greaXpert/enginPart.webp";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
