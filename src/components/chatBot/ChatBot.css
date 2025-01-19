@@ -3,17 +3,29 @@
 @keyframes release {
     0%{
         filter: drop-shadow(1px 1px 10px #fff);
+        transform: translateY(0px);
+
+
 
     }50%{
      filter: drop-shadow(1px 1px 15px #fff);
+     transform: translateY(10px);
+
     }100%{
         filter: drop-shadow(1px 1px 10px #fff);
+        transform: translateY(0px);
+
 
     }
     
 }
 
+
 .chatbot{
-    animation: infinite 2s release ;
+    animation: infinite 3s release ;
+    transition: .2s;
 }
 
+.chatbot:hover{
+    scale: 1.06;
+}

@@ -58,11 +58,11 @@ const HeroSection = () => {
             Everything you need for your car in one place.
           </p>
           <button
-           
+            href="tel:+911234567890"
             className="content relative mt-6 px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transform overflow-hidden"
           >
             <span className="absolute inset-0 bg-white w-0 h-full transition-all duration-300 ease-in-out transform -translate-x-full hover:w-full"></span>
-            <span className="relative z-10">Call Now</span>
+            <span className="relative z-10" >Call Now</span>
           </button>
          
          <ChatBot/>

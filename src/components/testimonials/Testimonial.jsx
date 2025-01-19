@@ -2,11 +2,55 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCar, faStar } from "@fortawesome/free-solid-svg-icons";
 
 
-import pic1 from '../../assets/images/testimonial_images/testi.jpg';
-import pic2 from "../../assets/images/testimonial_images/testi2.jpg";
-import React from "react";
+import pic1 from '../../assets/images/testimonial_images/testi.webp';
+import pic2 from "../../assets/images/testimonial_images/testi2.webp";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const TestimonialCard = React.memo(({ imgSrc, name, title, testimonial }) => {
+
+  useEffect(() => {
+    // Register the ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate section and cards using ScrollTrigger
+    gsap.fromTo(
+      ".choose-us-section",
+      { opacity: 0, y: -200 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".choose-us-section",
+        
+          scrub: true,
+        },
+      }
+    );
+
+    // Animate each card with staggered effect
+    gsap.fromTo(
+      ".choose-us-card",
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: .2,
+        scrollTrigger: {
+          trigger: ".choose-us-card",
+          start: "top 40%",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
   return (
     <div className="p-4 md:w-1/2 w-full testimonial-card">
       <div className="h-full bg-black border-2 border-red-500 p-8 rounded-lg shadow-lg hover:shadow-red-500/50 transition-all duration-300">
@@ -42,10 +86,10 @@ const Testimonial = () => {
   return (
     <section className="text-gray-400 bg-black body-font testimonial-section">
       <div className="container px-5 py-24 mx-auto">
-        <h1 className="text-4xl font-bold title-font text-white mb-12 text-center">
+        <h1 className="choose-us-section text-4xl font-bold title-font text-white mb-12 text-center ">
           What Our Customers Say
         </h1>
-        <div className="flex flex-wrap -m-4">
+        <div className="choose-us-card flex flex-wrap -m-4">
           <TestimonialCard
             imgSrc={pic1}
             name="Harry"

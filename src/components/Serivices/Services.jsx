@@ -1,8 +1,33 @@
 import "./Services.css"; // Include custom styles for further enhancements
 import carImage from "../../assets/images/Services_banner/Image_banner-car.webp";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 
 const Services = () => {
+gsap.registerPlugin(ScrollTrigger);
 
+ useGSAP(()=>{
+
+
+  gsap.fromTo(
+    ".service-card",
+    { opacity: 0, scale: 0.8 },
+    {
+      opacity: 1,
+      scale: 1,
+      duration: 1.2,
+      ease: "power3.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".service-card",
+        start: "top 80%",
+        end: "bottom top",
+        scrub: true,
+      },
+    }
+  );
+ })
 
   return (
     <>

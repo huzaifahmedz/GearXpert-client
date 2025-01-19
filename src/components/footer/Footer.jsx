@@ -47,7 +47,7 @@ const Footer = () => {
         {/* Logo Section */}
         <div className="flex flex-col items-center md:place-items-center">
           <img src={logo} alt="QuickMart Logo" className="w-32 h-auto mb-4" />
-          <p className="text-sm text-center md:text-left">
+          <p className="text-sm w-48  text-center md:text-left">
             Your trusted partner for high-quality autoparts.
           </p>
         </div>
@@ -170,7 +170,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="mt-4 text-center text-sm">
-          © 2025 QuickMart Autoparts. All Rights Reserved.
+          © 2025 GearXpert Autoparts. All Rights Reserved.
         </p>
       </div>
 
