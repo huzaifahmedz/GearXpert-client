@@ -29,6 +29,7 @@ gsap.registerPlugin(ScrollTrigger);
   );
  })
 
+ 
   return (
     <>
       {/* Services Header Section */}
