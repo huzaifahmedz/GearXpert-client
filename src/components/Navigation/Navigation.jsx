@@ -122,7 +122,7 @@ const Navigation = () => {
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex space-x-6">
               <NavLink
-                to="/home"
+                to="/"
                 className="TopNavSecond text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
               >
                 Home
@@ -212,31 +212,31 @@ const Navigation = () => {
 
         {/* Mobile Navigation Links */}
         <NavLink
-          to="#home"
+          to="/"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
         >
           Home
         </NavLink>
         <NavLink
-          to="#about"
+          to="/about"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
         >
           About
         </NavLink>
         <NavLink
-          to="#services"
+          to="/services"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
         >
           Services
         </NavLink>
         <NavLink
-          to="#contact"
+          to="/contact"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
         >
           Contact
         </NavLink>
         <NavLink
-          to="#contact"
+          to="/contact"
           className="menuItems bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-md text-xl"
         >
           Contact Us

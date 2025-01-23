@@ -1,10 +1,10 @@
 import React from "react";
-import HomePage from "./pages/Home/HomePage";
+import ReactRouting from "./Router";
 
 const App = () => {
   return (
     <div>
-      <HomePage/>
+      <ReactRouting />
     </div>
   );
 };

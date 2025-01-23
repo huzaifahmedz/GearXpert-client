@@ -5,44 +5,62 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
 const Services = () => {
-gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
- useGSAP(()=>{
+  useGSAP(() => {
+    gsap.fromTo(
+      ".service-card",
+      { opacity: 0, scale: 0.8 },
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".service-card",
+          start: "top 80%",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  });
 
-
-  gsap.fromTo(
-    ".service-card",
-    { opacity: 0, scale: 0.8 },
-    {
-      opacity: 1,
-      scale: 1,
-      duration: 1.2,
-      ease: "power3.out",
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: ".service-card",
-        start: "top 80%",
-        end: "bottom top",
-        scrub: true,
-      },
-    }
-  );
- })
-
- 
+  useGSAP(() => {
+    gsap.from("#main-component", {
+      opacity: 0,
+      duration: 1,
+    });
+    gsap.from("#hrLine", {
+      width: 0,
+      duration: 1,
+      delay: 1.2,
+    });
+    gsap.from("#text", {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      stagger: 0.3,
+    });
+  }, []);
   return (
     <>
       {/* Services Header Section */}
       <section
+      id="main-component"
         className="services-header bg-cover bg-center text-white py-48 px-4"
-        style={{ backgroundImage: `url(${carImage})`, backgroundAttachment: "fixed" }}
+        style={{
+          backgroundImage: `url(${carImage})`,
+          backgroundAttachment: "fixed",
+        }}
       >
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold animate_animated animate_fadeInDown">
-            Services <span className="text-red-500">We Provide</span>
+          <h2 id="text" className="text-4xl md:text-5xl font-bold animate_animated animate_fadeInDown">
+            Services <span id="text" className="text-red-500 ">We</span><span id="text" className="text-red-500"> Provide</span>
           </h2>
           <div className="mt-4 animate_animated animate_fadeInUp">
-            <hr className="border-t-2 border-white w-16 mx-auto" />
+          <hr id="hrLine" className="border-t-4 border-white w-24  rounded-sm mx-auto" />
           </div>
         </div>
       </section>

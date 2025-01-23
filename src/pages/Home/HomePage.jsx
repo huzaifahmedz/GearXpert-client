@@ -11,7 +11,6 @@ import Footer from "../../components/footer/Footer";
 
 const HomePage = () => {
   return <>
-  <Navigation/>
   <HeroSection/>
   <AutomobileInfo/>
   <Services/>
@@ -19,7 +18,6 @@ const HomePage = () => {
   <ChooseUs/>
   <Testimonial/>
   <Marque/>
-  <Footer/>
   </>;
 };
 

@@ -1,11 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo,icons/GearX.png";
 import Mastercard from "../../assets/images/footer_images/Mastercard-logo.svg.png";
 // import visa from "../../assets/images/logo,icons/Visa.svg";
 import paypal from "../../assets/images/footer_images/PayPal.svg.png";
-
-
 
 const Footer = () => {
   const handleSubscribe = () => {
@@ -46,7 +44,7 @@ const Footer = () => {
       <div className="container mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo Section */}
         <div className="flex flex-col items-center md:place-items-center">
-          <img src={logo} alt="QuickMart Logo" className="w-32 h-auto mb-4" />
+          <img src={logo} alt="GearXpert Logo" className="w-32 h-auto mb-4" />
           <p className="text-sm w-48  text-center md:text-left">
             Your trusted partner for high-quality autoparts.
           </p>
@@ -57,36 +55,37 @@ const Footer = () => {
           <h2 className="text-lg font-bold text-white mb-4">Quick Links</h2>
           <nav className="list-none space-y-2">
             <li>
-              <NavLink
+              <Link
                 to="/car-accessories"
                 className="hover:text-red-500 transition-colors"
               >
                 Car Accessories
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/engine-parts"
                 className="hover:text-red-500 transition-colors"
               >
                 Engine Parts
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/tools-and-equipment"
                 className="hover:text-red-500 transition-colors"
               >
                 Tools & Equipment
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
-                to="/contact-us"
+              <Link
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                to="/contact"
                 className="hover:text-red-500 transition-colors"
               >
                 Contact Us
-              </NavLink>
+              </Link>
             </li>
           </nav>
         </div>
@@ -96,36 +95,36 @@ const Footer = () => {
           <h2 className="text-lg font-bold text-white mb-4">Support</h2>
           <nav className="list-none space-y-2">
             <li>
-              <NavLink
+              <Link
                 to="/faqs"
                 className="hover:text-red-500 transition-colors"
               >
                 FAQs
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/returns-policy"
                 className="hover:text-red-500 transition-colors"
               >
                 Returns Policy
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/shipping-info"
                 className="hover:text-red-500 transition-colors"
               >
                 Shipping Information
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink
+              <Link
                 to="/warranty"
                 className="hover:text-red-500 transition-colors"
               >
                 Warranty Details
-              </NavLink>
+              </Link>
             </li>
           </nav>
         </div>
