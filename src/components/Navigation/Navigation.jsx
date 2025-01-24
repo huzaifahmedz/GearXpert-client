@@ -8,12 +8,20 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import logo from "../../assets/images/logo,icons/GearX.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  let navigate = useNavigate();
+
+  let handleNavigate =()=>{
+    navigate('/')
+
+    
+  }
 
   // Define GSAP animations using useGSAP hook
   useGSAP(() => {
@@ -115,6 +123,12 @@ const Navigation = () => {
               <img
                 src={logo}
                 alt="Logo"
+                onClick={() => {
+                  handleNavigate();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                             
+
                 className="TopNavfirst w-[100px] lg:w-40"
               />
             </div>
@@ -124,23 +138,27 @@ const Navigation = () => {
               <NavLink
                 to="/"
                 className="TopNavSecond text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Home
               </NavLink>
               <NavLink
                 to="/about"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="TopNavSecond text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
               >
                 About
               </NavLink>
               <NavLink
                 to="/services"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="TopNavSecond text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
               >
                 Services
               </NavLink>
               <NavLink
                 to="/contact"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="TopNavSecond text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
               >
                 Contact
@@ -149,12 +167,12 @@ const Navigation = () => {
 
             {/* Contact Us Button (Desktop) */}
             <div className="hidden md:block">
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="TopNavSecond bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md text-sm"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Hamburger Button */}
@@ -214,30 +232,35 @@ const Navigation = () => {
         <NavLink
           to="/"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
+          onClick={toggleMenu}
         >
           Home
         </NavLink>
         <NavLink
           to="/about"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
+          onClick={toggleMenu}
         >
           About
         </NavLink>
         <NavLink
           to="/services"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
+          onClick={toggleMenu}
         >
           Services
         </NavLink>
         <NavLink
           to="/contact"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
+          onClick={toggleMenu}
         >
           Contact
         </NavLink>
         <NavLink
           to="/contact"
           className="menuItems bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-md text-xl"
+          onClick={toggleMenu}
         >
           Contact Us
         </NavLink>

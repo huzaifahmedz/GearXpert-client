@@ -35,12 +35,12 @@ const Services = () => {
     gsap.from("#hrLine", {
       width: 0,
       duration: 1,
-      delay: 1.2,
+      delay: 1.1,
     });
     gsap.from("#text", {
       opacity: 0,
       y: 30,
-      duration: 1,
+      duration: .9,
       stagger: 0.3,
     });
   }, []);

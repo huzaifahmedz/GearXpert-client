@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import video from "../../assets/videos/video-banner.mp4";
+import video from "../../assets/videos/video-banner.webm";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ChatBot from "../chatBot/ChatBot";

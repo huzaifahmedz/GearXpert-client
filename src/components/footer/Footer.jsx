@@ -57,6 +57,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/car-accessories"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className="hover:text-red-500 transition-colors"
               >
                 Car Accessories
@@ -66,13 +67,17 @@ const Footer = () => {
               <Link
                 to="/engine-parts"
                 className="hover:text-red-500 transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+
               >
                 Engine Parts
               </Link>
             </li>
             <li>
               <Link
-                to="/tools-and-equipment"
+                to="/Tools&Equipment"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+
                 className="hover:text-red-500 transition-colors"
               >
                 Tools & Equipment

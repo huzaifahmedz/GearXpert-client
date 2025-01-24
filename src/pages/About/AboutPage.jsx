@@ -167,6 +167,8 @@ const About = () => {
         </p>
         <Link
         to="/contact"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+
           
           className="bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 md:px-8 md:py-4 rounded-md transition inline-block shadow-md"
         >
