@@ -49,7 +49,7 @@ const Services = () => {
       {/* Services Header Section */}
       <section
       id="main-component"
-        className="services-header bg-cover bg-center text-white py-48 px-4"
+        className="services-header bg-cover bg-center text-white py-48 px-4 "
         style={{
           backgroundImage: `url(${carImage})`,
           backgroundAttachment: "fixed",

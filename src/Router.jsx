@@ -9,6 +9,11 @@ import ContactUs from "./pages/contactUs/ContactUs";
 import ToolsEquipment from "./pages/Tools_&_Equipment/ToolsEquipment";
 import CarAccessories from "./pages/CarAccessories/CarAccessories";
 import EngineParts from "./pages/EnginParts/EnginParts";
+import FAQAccordion from "./pages/FAQAccordion/FAQAccordion";
+import ShippingInformation from "./pages/ShippingInfo/ShippingInformation";
+import PrivacyAndPolicy from "./pages/PrivacyPolicy/PrivacyAndPolicy";
+import TermsAndConditions from "./pages/termsAndConditions/TermsAndConditions";
+import ChatBot from "./components/chatBot/ChatBot";
 
 const ReactRouting = () => {
   return (
@@ -22,7 +27,13 @@ const ReactRouting = () => {
         <Route path='/Tools&Equipment' element={<ToolsEquipment/>}/>
         <Route path="/car-accessories" element={<CarAccessories/>}/>
         <Route path="/engine-parts" element={<EngineParts/>}/>
+        <Route path="/faqs" element={<FAQAccordion/>}/>
+        <Route path="/shipping-info" element={<ShippingInformation/>}/>
+        <Route path="/privacy-policy" element={<PrivacyAndPolicy/>}/>
+        <Route path="/terms&Conditions" element={<TermsAndConditions/>}/>
+
       </Routes>
+      <ChatBot />
       <Footer/>
     </div>
   );

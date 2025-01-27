@@ -4,7 +4,6 @@ import "./ContactUs.css";
 import carImage from "../../assets/images/contactUs_banner/contact-Us_banner.webp";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({

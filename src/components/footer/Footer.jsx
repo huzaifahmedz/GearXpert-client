@@ -102,6 +102,8 @@ const Footer = () => {
             <li>
               <Link
                 to="/faqs"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+
                 className="hover:text-red-500 transition-colors"
               >
                 FAQs
@@ -109,15 +111,19 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/returns-policy"
+                to="/privacy-policy"
                 className="hover:text-red-500 transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+
               >
-                Returns Policy
+                Privacy Policy
               </Link>
             </li>
             <li>
               <Link
                 to="/shipping-info"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+
                 className="hover:text-red-500 transition-colors"
               >
                 Shipping Information
@@ -125,10 +131,12 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                to="/warranty"
+                to="/terms&Conditions"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+
                 className="hover:text-red-500 transition-colors"
               >
-                Warranty Details
+                terms & Conditions
               </Link>
             </li>
           </nav>

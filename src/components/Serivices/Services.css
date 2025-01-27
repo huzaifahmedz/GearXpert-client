@@ -1,6 +1,7 @@
 .services-header {
+  width: 100%;
   box-shadow: 0 0 300px 100px black inset;
-  background-size: cover;
+  /* background-size: cover; */
   background-position: center;
 }
 

@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ChatBot from "../chatBot/ChatBot";
 import './HeroSection.css'
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   let videoRef = useRef();
@@ -62,10 +63,11 @@ const HeroSection = () => {
             className="content relative mt-6 px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600 transform overflow-hidden"
           >
             <span className="absolute inset-0 bg-white w-0 h-full transition-all duration-300 ease-in-out transform -translate-x-full hover:w-full"></span>
-            <span className="relative z-10" >Call Now</span>
+            <a href="tel:+918482834029" className="relative z-10">Call Now</a>
+
           </button>
          
-         <ChatBot/>
+         {/* <ChatBot/> */}
          
            
         </div>

@@ -1,33 +1,29 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import './Navigation.css';
 import {
   faFacebook,
   faInstagram,
   faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import logo from "../../assets/images/logo,icons/GearX.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import logo from "../../assets/images/logo,icons/GearX.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import './Navigation.css'
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  let navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/");
+  };
 
-  let handleNavigate =()=>{
-    navigate('/')
-
-    
-  }
-
-  // Define GSAP animations using useGSAP hook
+  // GSAP animations
   useGSAP(() => {
-    let tl = gsap.timeline();
-    
-    // Animation for top navigation elements
+    const tl = gsap.timeline();
+
     tl.from(".TopNavfirst", {
       opacity: 0,
       x: "-20px",
@@ -65,8 +61,13 @@ const Navigation = () => {
 
   // Toggle menu state
   const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prevState => !prevState);
+    setIsMenuOpen((prev) => !prev);
   }, []);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+  }, [isMenuOpen]);
 
   return (
     <header className="fixed top-0 right-0 w-full z-30">
@@ -76,8 +77,6 @@ const Navigation = () => {
           <p className="TopNavfirst font-medium text-xs">
             🛍️ 35% Off on Each Product!
           </p>
-
-          {/* Social Media Icons */}
           <div className="flex space-x-4">
             <a
               href="https://www.facebook.com"
@@ -123,65 +122,60 @@ const Navigation = () => {
               <img
                 src={logo}
                 alt="Logo"
-                onClick={() => {
-                  handleNavigate();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-                             
-
-                className="TopNavfirst w-[100px] lg:w-40"
+                onClick={handleNavigate}
+                className="TopNavfirst w-[100px] lg:w-40 cursor-pointer"
               />
             </div>
-
-            {/* Desktop Navigation Links */}
             <div className="hidden md:flex space-x-6">
               <NavLink
                 to="/"
+                onClick={window.scrollTo({ top: 0, behavior: "smooth" })
+              }
+
                 className="TopNavSecond text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Home
               </NavLink>
               <NavLink
                 to="/about"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={window.scrollTo({ top: 0, behavior: "smooth" })
+              }
                 className="TopNavSecond text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
               >
                 About
               </NavLink>
               <NavLink
                 to="/services"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={window.scrollTo({ top: 0, behavior: "smooth" })
+              }
                 className="TopNavSecond text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
               >
                 Services
               </NavLink>
               <NavLink
                 to="/contact"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={window.scrollTo({ top: 0, behavior: "smooth" })
+              }
                 className="TopNavSecond text-gray-300 hover:text-white px-3 py-2 text-sm font-medium"
               >
                 Contact
               </NavLink>
             </div>
-
-            {/* Contact Us Button (Desktop) */}
             <div className="hidden md:block">
               <Link
                 to="/contact"
+                onClick={window.scrollTo({ top: 0, behavior: "smooth" })
+              }
                 className="TopNavSecond bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md text-sm"
               >
                 Contact Us
               </Link>
             </div>
-
-            {/* Mobile Hamburger Button */}
             <div className="md:hidden">
               <button
                 onClick={toggleMenu}
                 className="text-gray-300 hover:text-white focus:outline-none"
               >
-                <span className="sr-only">Open main menu</span>
                 <svg
                   className="hamberger h-6 w-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +198,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-8 transform transition-transform duration-300 ${
+        className={`fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-8 transform transition-transform duration-300 ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -227,41 +221,41 @@ const Navigation = () => {
             />
           </svg>
         </button>
-
-        {/* Mobile Navigation Links */}
         <NavLink
           to="/"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
-          onClick={toggleMenu}
+          onClick={()=>{toggleMenu();
+          window.scrollTo({ top: 0, behavior: "smooth" })
+          }
+          }
         >
           Home
         </NavLink>
         <NavLink
           to="/about"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
-          onClick={toggleMenu}
-        >
+          onClick={()=>{toggleMenu();
+            window.scrollTo({ top: 0, behavior: "smooth" })
+            }
+            }        >
           About
         </NavLink>
         <NavLink
           to="/services"
           className="menuItems text-gray-300 hover:text-white text-xl font-medium"
-          onClick={toggleMenu}
-        >
+          onClick={()=>{toggleMenu();
+            window.scrollTo({ top: 0, behavior: "smooth" })
+            }
+            }        >
           Services
         </NavLink>
         <NavLink
           to="/contact"
-          className="menuItems text-gray-300 hover:text-white text-xl font-medium"
-          onClick={toggleMenu}
-        >
-          Contact
-        </NavLink>
-        <NavLink
-          to="/contact"
           className="menuItems bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-6 rounded-md text-xl"
-          onClick={toggleMenu}
-        >
+          onClick={()=>{toggleMenu();
+            window.scrollTo({ top: 0, behavior: "smooth" })
+            }
+            }        >
           Contact Us
         </NavLink>
       </div>
