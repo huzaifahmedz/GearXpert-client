@@ -72,10 +72,10 @@ const About = () => {
       {/* Intro Section */}
       <section ref={introRef} className="text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide">
-          About <span className="text-red-500">GearXpert</span>
+          About <span className="text-red-500">Super RF Japan</span>
         </h1>
         <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
-          GearXpert is your trusted partner for top-notch vehicle parts and
+          Super RF Japan is your trusted partner for top-notch vehicle parts and
           accessories. We strive to elevate your driving experience through
           unparalleled quality and reliability.
         </p>

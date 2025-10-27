@@ -76,7 +76,7 @@ const CarAccessories = () => {
         </h1>
         <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
           Discover the finest car accessories to enhance your driving
-          experience. From practical essentials to stylish upgrades, GearXpert
+          experience. From practical essentials to stylish upgrades, Super RF Japan
           has everything you need for a more comfortable and enjoyable ride.
         </p>
       </section>

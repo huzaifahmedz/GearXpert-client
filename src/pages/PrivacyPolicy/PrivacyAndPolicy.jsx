@@ -65,7 +65,7 @@ const PrivacyAndPolicy = () => {
 
           {/* Intro Text */}
           <p className="text-gray-300 mb-6 leading-relaxed relative z-10 text-center text-sm md:text-base">
-            At <span className="font-bold">GearXpert</span>, your privacy is our
+            At <span className="font-bold">Super RF Japan</span>, your privacy is our
             priority. Learn more about how we protect your information.
           </p>
 

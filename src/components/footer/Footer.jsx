@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo,icons/GearX.png";
+import logo from "../../assets/images/logo,icons/super-rfjapan-logo.png";
 import Mastercard from "../../assets/images/footer_images/Mastercard-logo.svg.png";
 // import visa from "../../assets/images/logo,icons/Visa.svg";
 import paypal from "../../assets/images/footer_images/PayPal.svg.png";
@@ -182,7 +182,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="mt-4 text-center text-sm">
-          © 2025 GearXpert Autoparts. All Rights Reserved.
+          © 2025 Super RF Japan Autoparts. All Rights Reserved.
         </p>
       </div>
 

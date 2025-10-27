@@ -37,10 +37,10 @@ const AutomobileInfo = () => {
         {/* Right Content */}
         <div className="AnimateImage flex flex-col justify-center space-y-3 text-left">
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
-            GearXpert: Drive Excellence, Upgrade with Precision
+            Super RF Japan : Drive Excellence, Upgrade with Precision
           </h1>
           <p className="text-lg md:text-xl text-gray-300">
-            GearXpert is your ultimate destination for premium vehicle auto
+            Super RF Japan is your ultimate destination for premium vehicle auto
             parts. From cars to trucks, we provide a vast selection of
             high-quality, reliable, and affordable components designed to
             enhance performance and ensure a smooth ride

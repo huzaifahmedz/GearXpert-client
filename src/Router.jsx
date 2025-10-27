@@ -33,7 +33,7 @@ const ReactRouting = () => {
         <Route path="/terms&Conditions" element={<TermsAndConditions/>}/>
 
       </Routes>
-      <ChatBot />
+      {/* <ChatBot /> */}
       <Footer/>
     </div>
   );

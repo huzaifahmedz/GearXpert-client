@@ -7,7 +7,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import logo from "../../assets/images/logo,icons/GearX.png";
+import logo from "../../assets/images/logo,icons/super-rfjapan-logo.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import './Navigation.css'
