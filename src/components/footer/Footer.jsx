@@ -44,7 +44,7 @@ const Footer = () => {
       <div className="container mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo Section */}
         <div className="flex flex-col items-center md:place-items-center">
-          <img src={logo} alt="GearXpert Logo" className="w-32 h-auto mb-4" />
+          <img src={logo} alt="Logo" className="w-32 h-auto mb-4" />
           <p className="text-sm w-48  text-center md:text-left">
             Your trusted partner for high-quality autoparts.
           </p>

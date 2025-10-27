@@ -62,7 +62,7 @@ const TermsAndConditions = () => {
 
           {/* Header Section */}
           <p className="text-gray-200 mb-6 md:mb-10 leading-relaxed text-center relative z-10 text-sm md:text-base">
-            Welcome to <span className="font-semibold">GearXpert</span>. Please
+            Welcome to <span className="font-semibold">Super RF Japan</span>. Please
             read the following terms carefully as they govern your use of our
             services.
           </p>
@@ -97,7 +97,7 @@ const TermsAndConditions = () => {
               </h2>
               <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                 All content on this website, including text, images, logos, and
-                designs, is the property of GearXpert and protected by copyright
+                designs, is the property of Super RF Japan and protected by copyright
                 laws.
               </p>
             </section>
@@ -129,7 +129,7 @@ const TermsAndConditions = () => {
               </h2>
               <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                 For any questions about these terms, please contact us at
-                <span className="text-red-500 font-medium"> support@gearxpert.com</span>.
+                <span className="text-red-500 font-medium"> support@Superrfjapan.com</span>.
               </p>
             </section>
           </div>

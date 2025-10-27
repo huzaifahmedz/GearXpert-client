@@ -75,7 +75,7 @@ const ToolsEquipment = () => {
           Tools & <span className="text-red-500">Equipment</span>
         </h1>
         <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
-          At GearXpert, we provide top-notch tools and equipment designed to
+          At Super RF Japan, we provide top-notch tools and equipment designed to
           make vehicle maintenance and repairs efficient and hassle-free. From
           professional-grade toolsets to cutting-edge diagnostic devices, we
           have everything you need.
@@ -117,7 +117,7 @@ const ToolsEquipment = () => {
       {/* Features Section */}
       <section ref={featuresRef} className="text-center my-12 md:my-16">
         <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-          Why GearXpert Tools?
+          Why Super RF Japan Tools?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {[
